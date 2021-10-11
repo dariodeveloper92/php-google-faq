@@ -5,12 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Esercizio: Google FAQs </title>
+
+    <style>
+        main {
+            width: 100%;
+            height: 100%;
+            display: flex; 
+            justify-content: center;
+        }
+
+        #container_main {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .container_faq {
+            width: 100%;
+            height: 100%;
+            /* position: relative;
+            margin: 10px 200px; */
+        }
+    </style>
 </head>
 
 <?php 
     $faqs = [
         [
-            'domanda' => '<h2>Come state implementando la recente decisione della Corte di giustizia dell\'Unione europea (CGUE) relativa al diritto all\'oblio\? </h2>',
+            'domanda' => '<h2>Come state implementando la recente decisione della Corte di giustizia dell\'Unione europea (CGUE) relativa al diritto all\'oblio? </h2>',
             'risposta1' => '<p>La recente decisione della Corte di giustizia dell\'Unione europea ha profonde conseguenze per i motori di ricerca in Europa. La Corte ha stabilito che alcuni utenti hanno il diritto di chiedere ai motori di ricerca come Google di rimuovere risultati relativi a chiavi di ricerca che includono il proprio nome. Per poter essere rimossi, i risultati visualizzati devono essere inadeguati, irrilevanti o non più rilevanti, o eccessivi. <p>',
             'risposta2' => '<p>Da quando questa decisione è stata pubblicata il 13 maggio 2014, abbiamo lavorato incessantemente per uniformarci a essa. Si tratta di una procedura complessa perché dobbiamo valutare ogni singola richiesta e effettuare un bilanciamento tra il diritto dell\'individuo a controllare i suoi dati personali ed il diritto di tutti di conoscere e distribuire le informazioni. <p>',
             'risposta3' => '<p>Per presentare una richiesta di rimozione, compila questo modulo web. Riceverai una risposta automatica che conferma la ricezione della tua richiesta. Dopodiché valuteremo il tuo caso (tieni presente che potrebbe occorrere un po\' di tempo perché abbiamo già ricevuto tante richieste simili). Nel valutare la richiesta, considereremo se i risultati includono informazioni obsolete relative alla tua vita privata. Considereremo inoltre se vi è un interesse pubblico a che le informazioni rimangano nei nostri risultati delle ricerche, ad esempio se riguardano frodi finanziarie, negligenza professionale, condanne penali o la tua condotta pubblica in relazione a un pubblico ufficio (eletto o non eletto). Queste valutazioni sono complesse e, in quanto organizzazione privata, potremmo non essere nella posizione giusta per prendere decisioni in merito al tuo caso. Se non sei d\'accordo con la nostra valutazione, puoi rivolgerti all\'Autorità garante per la protezione dei dati personali nel tuo paese. <p>',
@@ -47,17 +71,25 @@
         ],
     ];
 
-    foreach($faqs as $key => $faqClass) {
-        echo '<strong>' . $key . '</strong><br/>';
-        foreach($faqClass as $faq) {
-            echo $faq . '<br/>';
-        }
-    }
+    
     
 ?>
 
 
 <body>
-    
+    <main>
+        <div id="container_main">
+            <div class="container_faq">
+                <?php 
+                    foreach($faqs as $key => $faqClass) {
+                        //echo '<strong>' . $key . '</strong><br/>';
+                        foreach($faqClass as $faq) {
+                            echo $faq . '<br/>';
+                        }
+                    }
+                ?>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
