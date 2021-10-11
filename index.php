@@ -7,6 +7,67 @@
     <title> Esercizio: Google FAQs </title>
 
     <style>
+        /* Header ------------------------------*/
+        header {
+            width: 100%;
+            height: 10vh;
+            /* background-color: greenyellow; */
+            border-bottom: 1px solid lightgrey;
+        }
+
+        #header_top {
+            width: 100%;
+            height: 50%;
+        }
+
+        #header_bottom {
+            width: 50%;
+        }
+
+        .container_top {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* margin: 0 10px; */
+        }
+
+        .title_header {
+            color: #5F6368;
+        }
+
+        .blueButton {
+            width: 100px;
+            height: 35px;
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+            border: 3px solid blue;
+            cursor: pointer;
+        }
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .nav_item {
+            list-style: none;
+        }
+
+        .nav_link {
+            text-decoration: none;
+            color: #5F6368;
+        }
+
+        /* Hover */
+        nav a:hover {
+            border-bottom: 3px solid blue;
+            color: blue;
+        }
+
+        /* Main ------------------------------*/
         main {
             width: 100%;
             height: 100%;
@@ -25,8 +86,6 @@
         .container_faq {
             width: 100%;
             height: 100%;
-            /* position: relative;
-            margin: 10px 200px; */
         }
     </style>
 </head>
@@ -79,6 +138,35 @@
 
 
 <body>
+    <header>
+        <div id="header_top">
+            <div class="container_top">
+                <h2 class="title_header"> Google Privacy e termini</h2>
+                <button class="blueButton"> Accedi </button>
+            </div>
+        </div>
+        <div id="header_bottom">
+            <nav>
+                <ul class="navbar">
+                    <li class="nav_item">
+                        <a class="nav_link" href="#"> Introduzione </a>
+                    </li>
+                    <li class="nav_item">
+                        <a class="nav_link" href="#"> Norme sulla privacy </a>
+                    </li>
+                    <li class="nav_item">
+                        <a class="nav_link" href="#"> Termini di servizio </a>
+                    </li>
+                    <li class="nav_item">
+                        <a class="nav_link" href="#"> Tecnologie </a>
+                    </li>
+                    <li class="nav_item">
+                        <a class="nav_link" href="#"> Domande frequenti </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <main>
         <div id="container_main">
             <div class="container_faq">
